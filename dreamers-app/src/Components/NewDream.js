@@ -6,6 +6,7 @@ import axios from 'axios';
 const styles = {
   block: {
     maxWidth: 250,
+    margin: 15,
   },
   checkbox: {
     marginBottom: 5,
@@ -66,14 +67,22 @@ export default class NewDream extends Component {
   }
   render (){
     return (
-      <form action="/Dreams" onSubmit={this.onSubmit}>
+      <form
+        action="/Dreams"
+        onSubmit={this.onSubmit}>
       <div className='newDream'>
-        <DatePicker mode="portrait" hintText="Date" id= "date" onChange = {this.onChange}/>
-        <TextField
+        <DatePicker
+          mode="portrait"
+          hintText="Date"
+          id= "date"
+          onChange = {this.onChange}
+          style={{margin:10}}
+          /><TextField
           id="title"
           hintText="Dream Title"
           floatingLabelText="Give your dream a title"
           onChange ={this.onChange}
+          style={{margin:10}}
         /><br />
         <TextField
           id="description"
@@ -82,7 +91,7 @@ export default class NewDream extends Component {
           onChange ={this.onChange}
           multiLine={true}
           rows={2}
-          fullWidth={true}
+          style={{margin:10}}
         /><br />
       <div style={styles.block}>
        <Checkbox
@@ -102,7 +111,11 @@ export default class NewDream extends Component {
          style={styles.checkbox}
        /></div>
      <div className="saveButton">
-         <RaisedButton type="submit" label="Save"/>
+         <RaisedButton
+           type="submit"
+           label="Save"
+           style={{margin:10}}
+           />
        </div>
       </div>
     </form>

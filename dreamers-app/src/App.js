@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import {
   BrowserRouter,
   Route,
-  Link,
   Redirect,
 } from 'react-router-dom'
 
@@ -11,7 +10,6 @@ import HomePage from './Components/HomePage.js';
 import LoginPage from './containers/LoginPage.js';
 import LogoutFunction from './containers/LogoutFunction.js';
 import SignUpPage from './containers/SignUpPage.js';
-import DashboardPage from './containers/DashBoardPage.js';
 import Auth from './modules/Auth';
 import Dreams from './Components/Dreams.js';
 import Settings from './Components/Settings.js'
@@ -89,7 +87,6 @@ export default class App extends Component {
                   update={this.update}/>
 
           <PropsRoute exact path="/" component={HomePage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} setTitle={this.setTitle.bind(this)}/>
-          <PrivateRoute path="/dashboard" component={DashboardPage}/>
           <LoggedOutRoute path="/login" component={LoginPage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
           <LoggedOutRoute path="/signup" component={SignUpPage}/>
           <Route path="/logout" component={LogoutFunction}/>

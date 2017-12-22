@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentAdd from 'material-ui/svg-icons/content/add';
-import {Card, CardActions, CardTitle, CardText, FlatButton, FloatingActionButton} from 'material-ui';
+import {Card, CardTitle, CardText,FloatingActionButton} from 'material-ui';
 import { Link } from 'react-router-dom'
 import axios from 'axios';
 

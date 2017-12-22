@@ -58,6 +58,18 @@ toggle: {
   thumbOnColor: '#ffffff',
   thumbOffColor: '#000000',
 },
+datePicker: {
+  color: '#1a256b',
+  textColor: '#000000',
+  calendarTextColor:'#1a256b' ,
+  selectColor: '#1a256b',
+  selectTextColor: '#ffffff',
+  calendarYearBackgroundColor: '#ffffff',
+  headerColor: '#1a256b',
+},
+card: {
+  backgroundColor:'#1a256b'
+}
 
 });
 
