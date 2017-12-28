@@ -44,14 +44,17 @@ router.route('/journal/delete/:journalid')
     });
   })
 // create new journal entry with user id//
-router.route('/journals/:userid')
+router.route('/journalsForUser')
   .get((req, res) => {
-    User.findById(req.params.userid).populate('journalEntries').exec((err, user)=>{
-      if(err)
-      res.send(err);
-      res.json(user.journalEntries)
-
-    })
+    console.log("gettting journals");
+    console.log(req.user);
+    // User.findBy({"email":req.user.email}).populate('journalEntries').exec((err, user)=>{
+    //   if(err)
+    //   res.send(err);
+    //   console.log("something");
+    //   res.json(user);
+    // })
+    res.json("helsdfsdgqef");
   })
   .post((req, res) => {
     User.findById(req.params.userid, (err, user) => {
@@ -81,15 +84,6 @@ router.route('/journals/:userid')
       });
     });
   })
-
-  router.route('/journalTest')
-    .get((req, res, err) => {
-      if(err)
-      res.send(err);
-        res.json(
-          'This worked!'
-        );
-    })
 // update a journal entry//
 router.route('/journal/update/:journalid')
   .put((req, res) => {

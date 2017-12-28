@@ -2,11 +2,11 @@ const jwt = require('jsonwebtoken');
 const User = require('mongoose').model('User');
 const config = require('../config');
 
-
 /**
  *  The Auth Checker middleware function.
  */
 module.exports = (req, res, next) => {
+  console.log(req.headers)
   if (!req.headers.authorization) {
     console.log("in first if block");
     return res.status(401).end();

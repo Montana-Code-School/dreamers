@@ -24,8 +24,8 @@ injectTapEventPlugin();
              style={{margin:5}}
            />
          <Divider/>
-             {this.props.authenticated ? (
-               <div>
+           {this.props.authenticated ? (
+             <div>
                <MenuItem
                  primaryText="My Dreams"
                  containerElement={<Link to="/Dreams" />}
@@ -45,18 +45,19 @@ injectTapEventPlugin();
                  primaryText="LogOut"
                  containerElement={<Link to="/logout" />}
                  onTouchTap={() => this.props.update("Logout")}
-               /></div>
+               />
+             </div>
              ) : (
-               <div>
+             <div>
                <MenuItem
                  primaryText="Login"
                  containerElement={<Link to="/Login" />}
                  onTouchTap={() => this.props.update("Login")}
                />
               <MenuItem
-                    primaryText="SignUp"
-                    containerElement={<Link to="/signup" />}
-                    onTouchTap={() => this.props.update("SignUp")}
+                 primaryText="SignUp"
+                 containerElement={<Link to="/signup" />}
+                 onTouchTap={() => this.props.update("SignUp")}
                />
              </div>
              )}
