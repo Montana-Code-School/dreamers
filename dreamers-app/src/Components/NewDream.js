@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/App.css'
 import {Checkbox, DatePicker, TextField, RaisedButton} from 'material-ui';
 import axios from 'axios';
+import Auth from '../modules/Auth.js'
 
 const styles = {
   block: {
@@ -50,6 +51,7 @@ export default class NewDream extends Component {
     // });
     //  as well as bluebird to get rid of that promise error.
   }
+
   onChange = () => {
     this.setState({
       entryTitle: document.getElementById("title").value,
@@ -58,11 +60,11 @@ export default class NewDream extends Component {
     })
   }
   onSubmit= () => {
-    axios.post('http://localhost:5000/api/journals/5a374f1b369fb113123cdc4d',{
-                entryTitle: this.state.entryTitle,
-                description: this.state.description,
-                dreamDate: this.state.dreamDate
-              })
+    axios.post('http://localhost:5000/api/journalTest',{
+    },{
+      headers:'JWT ' + Auth.getToken()
+    }
+  )
          .then((response) => {console.log(response)})
   }
   render (){

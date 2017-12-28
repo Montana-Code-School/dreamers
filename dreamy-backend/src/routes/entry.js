@@ -81,6 +81,15 @@ router.route('/journals/:userid')
       });
     });
   })
+
+  router.route('/journalTest')
+    .get((req, res, err) => {
+      if(err)
+      res.send(err);
+        res.json(
+          'This worked!'
+        );
+    })
 // update a journal entry//
 router.route('/journal/update/:journalid')
   .put((req, res) => {

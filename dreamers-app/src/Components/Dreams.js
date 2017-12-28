@@ -3,18 +3,20 @@ import ContentAdd from 'material-ui/svg-icons/content/add';
 import {Card, CardTitle, CardText,FloatingActionButton} from 'material-ui';
 import { Link } from 'react-router-dom'
 import axios from 'axios';
+import Auth from '../modules/Auth.js'
 
 export default class Dreams extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      dreams: []
+      dreams: [],
+      token:Auth.getToken()
     }
   }
 
 
   componentDidMount() {
-    axios.get('http://localhost:5000/api/journals/5a374f1b369fb113123cdc4d')
+    axios.get('http://localhost:5000/api/journals')
          .then((res) => {
            console.log('res', res)
            console.log('state dreams', this.state.dreams)
