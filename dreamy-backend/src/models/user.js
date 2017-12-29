@@ -29,6 +29,11 @@ var userSchema = new Schema({
   wakeTime: Date
 })
 
+// userSchema.methods.addEntry = function (){
+//
+//   this.journalEntries
+// }
+
 /**
  * Compare the passed password with the value in the database. A model method.
  *

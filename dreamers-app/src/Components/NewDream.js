@@ -59,18 +59,28 @@ export default class NewDream extends Component {
       dreamDate: document.getElementById("date").value
     })
   }
-  onSubmit= () => {
-    axios.post('http://localhost:5000/api/journalTest',{
-    },{
-      headers:'JWT ' + Auth.getToken()
-    }
-  )
-         .then((response) => {console.log(response)})
+
+  onSubmit = () => {
+    axios
+      .post('http://localhost:5000/api/journals',
+            {
+              entryTitle: this.state.entryTitle,
+              description: this.state.description,
+              dreamDate: this.state.dreamDate
+            },
+            { headers : { Authorization: `bearer ${Auth.getToken()}` } }
+      )
+      .then(
+        (response) => {
+          console.log(response)
+        }
+      )
   }
+
   render (){
     return (
       <form
-        action="/Dreams"
+        action="/newDream"
         onSubmit={this.onSubmit}>
       <div className='newDream'>
         <DatePicker

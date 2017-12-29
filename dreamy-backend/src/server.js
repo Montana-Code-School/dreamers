@@ -24,13 +24,6 @@ passport.use('local-login', localLoginStrategy);
 
 app.use(bodyParser.json());
 
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE")
-//   res.header("Access-Control-Allow-Headers", "*");
-//   next();
-// });
-
 mongoose.connect('mongodb://n8:nstn8e81@ds259105.mlab.com:59105/dreamers', {
   useMongoClient: true
 })
