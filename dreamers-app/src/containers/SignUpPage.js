@@ -124,7 +124,7 @@ handleFileUpload(event){
         user={this.state.user}
         handleFileUpload={this.handleFileUpload}
       />
-
+    
     );
   }
 

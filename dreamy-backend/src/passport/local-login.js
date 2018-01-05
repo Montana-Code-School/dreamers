@@ -13,6 +13,7 @@ module.exports = new PassportLocalStrategy({
   session: false,
   passReqToCallback: true
 }, (req, email, password, done) => {
+  console.log('user password', password);
   const userData = {
     email: email.trim(),
     password: password.trim()
@@ -23,6 +24,7 @@ module.exports = new PassportLocalStrategy({
     if (err) { return done(err); }
 
     if (!user) {
+      console.log('hit! user')
       const error = new Error('Incorrect email or password');
       error.name = 'IncorrectCredentialsError';
 
@@ -34,6 +36,7 @@ module.exports = new PassportLocalStrategy({
       if (err) { return done(err); }
 
       if (!isMatch) {
+        console.log(passwordErr)
         const error = new Error('Incorrect email or password');
         error.name = 'IncorrectCredentialsError';
 

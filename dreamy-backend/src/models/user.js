@@ -13,7 +13,7 @@ var userSchema = new Schema({
     type: String,
     index: {unique: true}
   },
-  avatar: String, 
+  avatar: String,
   name: String,
   password: String,
   birthDate: Date,
@@ -39,6 +39,7 @@ var userSchema = new Schema({
 userSchema.methods.comparePassword = function comparePassword(password, callback) {
   bcrypt.compare(password, this.password, callback);
 };
+console.log(this.password);
 
 /**
  * The pre-save hook method.
