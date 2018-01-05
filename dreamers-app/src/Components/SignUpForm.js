@@ -4,16 +4,13 @@ import { Link } from 'react-router-dom';
 import { CardText, RaisedButton, TextField, FlatButton } from 'material-ui';
 import '../css/App.css'
 
-function handleFileUpload ({file}) {
-  console.log(file);
-}
-
 
 const SignUpForm = ({
   onSubmit,
   onChange,
   errors,
   user,
+  handleFileUpload
 }) => (
       <div className="Signup">
     <form action="/" onSubmit={onSubmit}>
@@ -51,14 +48,13 @@ const SignUpForm = ({
       </div>
 
       <div className="field-line">
-        <FlatButton
-          input type="file"
+        <input
+          type="file"
           name="file-upload"
           label="Upload Avatar"
-          primary={true}
           onChange={handleFileUpload}
         >
-      </FlatButton>
+      </input>
       </div>
 
       <div className="button-line">
@@ -75,7 +71,8 @@ SignUpForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
   errors: PropTypes.object.isRequired,
-  user: PropTypes.object.isRequired
+  user: PropTypes.object.isRequired,
+  handleFileUpload: PropTypes.func.isRequired
 };
 
 export default SignUpForm;

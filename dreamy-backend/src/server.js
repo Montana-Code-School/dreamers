@@ -14,6 +14,7 @@ const authCheckMiddleware = require('./middleware/auth-check');
 const app = express();
 const cors = require('cors')
 
+app.use(bodyParser({limit: '50mb'}));
 app.use(bodyParser.urlencoded({
   extended: true
 }));

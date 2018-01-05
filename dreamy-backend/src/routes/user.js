@@ -28,6 +28,7 @@ router.route('/user/create')
     user.firstName = req.body.firstName;
     user.lastName = req.body.lastName;
     user.email = req.body.email;
+    user.avatar = req.body.avatar;
     user.birthDate = req.body.birthDate;
     user.age = req.body.age;
     user.sign = req.body.sign;
@@ -37,6 +38,7 @@ router.route('/user/create')
     user.save((err) => {
       if (err)
         res.send(err);
+        console.log(user.avatar);
       res.json({
         message: "User created"
       });
