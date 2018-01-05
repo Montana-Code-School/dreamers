@@ -13,6 +13,7 @@ var userSchema = new Schema({
     type: String,
     index: {unique: true}
   },
+  avatar: String, 
   name: String,
   password: String,
   birthDate: Date,

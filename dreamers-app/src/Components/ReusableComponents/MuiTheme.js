@@ -17,10 +17,6 @@ const myMuiTheme = getMuiTheme ({
   color: '#282828',
   textColor: '#ffffff',
   },
-  avatar: {
-  color: '#e7831b',
-  backgroundColor: '#5b12f5',
-},
   drawer:{
   color:'#282828',
   text:'#ffffff',

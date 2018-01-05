@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { CardText, RaisedButton, TextField } from 'material-ui';
+import { CardText, RaisedButton, TextField, FlatButton } from 'material-ui';
 import '../css/App.css'
+
+function handleFileUpload ({file}) {
+  console.log(file);
+}
 
 
 const SignUpForm = ({
@@ -46,14 +50,26 @@ const SignUpForm = ({
         />
       </div>
 
+      <div className="field-line">
+        <FlatButton
+          input type="file"
+          name="file-upload"
+          label="Upload Avatar"
+          primary={true}
+          onChange={handleFileUpload}
+        >
+      </FlatButton>
+      </div>
+
       <div className="button-line">
         <RaisedButton type="submit" label="Create New Account" labelColor= "white"  />
       </div>
-
       <CardText>Already have an account? <Link to={'/login'}>Log in</Link></CardText>
     </form>
   </div>
 );
+
+
 
 SignUpForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,

@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import SignUpForm from '../Components/SignUpForm.js';
 
 
-class SignUpPage extends React.Component {
 
+class SignUpPage extends React.Component {
+  //onFileLoad = (e, file) => console.log(e.target.result, file.name);
   /**
    * Class constructor.
    */
@@ -93,12 +94,14 @@ class SignUpPage extends React.Component {
    */
   render() {
     return (
+
       <SignUpForm
         onSubmit={this.processForm}
         onChange={this.changeUser}
         errors={this.state.errors}
         user={this.state.user}
       />
+
     );
   }
 

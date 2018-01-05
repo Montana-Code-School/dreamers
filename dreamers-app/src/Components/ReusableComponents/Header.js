@@ -6,6 +6,7 @@ injectTapEventPlugin();
 
  export default class Header extends React.Component {
    render(){
+     console.log("path", __dirname)
      return(
        <div>
            <AppBar
@@ -19,13 +20,14 @@ injectTapEventPlugin();
              onRequestChange={() => this.props.setValue()}
              open={this.props.open}
            >
-           <Avatar
-             size={100}
-             style={{margin:5}}
-           />
+
          <Divider/>
              {this.props.authenticated ? (
                <div>
+                 <Avatar
+                   src = '../../../public/images/joe.jpg'
+                   size = {100}
+                />
                <MenuItem
                  primaryText="My Dreams"
                  style={{color:'#ffffff'}}
