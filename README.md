@@ -21,7 +21,8 @@
 - Webpack
 - Mongoose
 - jQuery
-- P5.js
+- three.js
+- material-ui
 
 ## <a name="File-Structure"></a>File-Structure
 dreamers/
@@ -41,23 +42,23 @@ dreamers/
   README.md
 
 ## <a name="Team"></a>Team Structure
-Kerry - Github P5.js Security - zahnahoria@yahoo.com
 Cassidy- Front end / user experience  cassidytucker60@gmail.com
-Nate- backend  
-Keesha- Project Manager / backend keeshy19@gmail.com
-Matt- Stand in Project Manager / stand in backend mcsutton@outlook.com
-Jillian- Front end / user experience  jillian.burgan@gmail.com
-Who does what? How have you defined these roles yourself? List every current
-team member here, maybe even include an email address for contacting.
+Keesha- Project Manager / backend / frontend/ security keeshy19@gmail.com
+Kerry - Github/ three.js - zahnahoria@yahoo.com
+Matt- Stand in Project Manager / stand in backend/huroku mcsutton@outlook.com
+Nate- backend/ huroku  
 
 ## <a name="Git"></a>Git Structure
 
 Kerry Zahn
-
-How do you handle your branches? Who is the main contact for questions on this?
+Keesha Cain
 
 ## <a name="Schedule"></a>Schedule
-
+Kerry: Wednesday Nov. 22nd - 27th
+Keesha: Always here
+Nate: Wednesday Nov. 22nd - 26th
+Matt: Nov. 22nd-26th, Dec. 17th-24th
+Cassidy:
 ### Deadline: January 2nd
 
 Week 1: Front/backend servers, test DB Data, mockups, get API routes, begin security research, create react routes,
@@ -67,17 +68,6 @@ Week 4: test frontend/backend, fix bugs, implement user password security
 Week 6: test frontend/backend, fix bugs,
 Week 7: test frontend/backend, fix bugs, maybe cry a little
 
-Personal Schedules
-
-Kerry: Wednesday Nov. 22nd - 27th
-Keesha: Always here
-Nate: Wednesday Nov. 22nd - 26th
-Matt: Nov. 22nd-26th, Dec. 17th-24th
-Cassidy:
-Jill:
-
-What deadlines does this project have? Has your project manager laid out a basic
-timeline? Put that here.
 
 ## <a name="Misc"></a>Miscellaneous
 
