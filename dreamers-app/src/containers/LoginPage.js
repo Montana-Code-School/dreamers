@@ -50,7 +50,7 @@ class LoginPage extends React.Component {
     // create an AJAX request
     const xhr = new XMLHttpRequest();
     console.log(xhr)
-    xhr.open('post', 'http://localhost:5000/auth/login');
+    xhr.open('post', 'https://localhost:5000/auth/login');
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.responseType = 'json';
 

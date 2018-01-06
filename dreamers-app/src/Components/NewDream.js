@@ -52,7 +52,7 @@ export default class NewDream extends Component {
       case "Epic":
         self.props.changeColors({
           color1: '#21254D',//darkish blue
-          color2: '#92D7D1'//aqua
+          color2: '#39a82f'//aqua
         });
         break;
       case "Recurring":
@@ -63,21 +63,21 @@ export default class NewDream extends Component {
         break;
       case "Adult":
         self.props.changeColors({
-          color1: '#372C3E',//darkslategray
-          color2: '#ADACAD' //purplish
+          color1: '#ff00f5',//fushia
+          color2: '#c2953f' //peachy
         });
         break;
         default:
         self.props.changeColors({
-          color1: '#000f70',
-          color2: '#0088ba'
+          color1: '#000f70', //midnightBlue
+          color2: '#0088ba' // aqua
         })
     }
   }
 
   onSubmit= () => {
     axios.post(
-      'http://localhost:5000/api/journals/userToken',
+      'https://localhost:5000/api/journals/userToken',
       {
         entryTitle: this.state.entryTitle,
         description: this.state.description,
