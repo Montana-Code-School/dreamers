@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../css/App.css'
-import {Checkbox, DatePicker, TextField, RaisedButton,TimePicker} from 'material-ui';
+import {Checkbox, DatePicker, TextField, RaisedButton} from 'material-ui';
 import axios from 'axios';
 import Auth from '../modules/Auth';
 
@@ -67,6 +67,11 @@ export default class NewDream extends Component {
           color2: '#ADACAD' //purplish
         });
         break;
+        default:
+        self.props.changeColors({
+          color1: '#000f70',
+          color2: '#0088ba'
+        })
     }
   }
 
@@ -96,24 +101,6 @@ export default class NewDream extends Component {
             hintText="Date"
             id= "date"
             onChange = {this.onChange}
-            style={{margin:10}}
-          />
-          <TextField
-            id="title"
-            hintText="Dream Title"
-            floatingLabelText="Give your dream a title"
-            onChange ={this.onChange}
-            style={{margin:10}}
-          />
-          <br />
-          <TextField
-            id="description"
-            hintText="Dream Description"
-            floatingLabelText="Give your dream a description"
-            onChange ={this.onChange}
-            multiLine={true}
-            rows={2}
-            fullWidth={true}
             style={{margin:10}}
           />
           <TextField

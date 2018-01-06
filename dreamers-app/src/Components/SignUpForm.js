@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { CardText, RaisedButton, TextField } from 'material-ui';
+import {RaisedButton, TextField } from 'material-ui';
 import '../css/App.css'
 
 
@@ -45,7 +45,7 @@ const SignUpForm = ({
       <div className="button-line">
         <RaisedButton type="submit" label="Create New Account" labelColor= "white"  />
       </div>
-      <CardText>Already have an account? <Link to={'/login'}>Log in</Link></CardText>
+      <p style={{color:'#ffffff', padding: '10px'}} >Already have an account? <Link style={{color:"#00d1ff"}} to={'/login'}>Log in</Link></p>
     </form>
   </div>
 );

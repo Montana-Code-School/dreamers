@@ -58,14 +58,14 @@ const myMuiTheme = getMuiTheme ({
     labelColor: '#ffffff',
   },
   datePicker: {
-    color: '#ffffff',
-    textColor: '#ffffff',
-    calendarTextColor: '#000000',
-    selectColor: '#282828',
-    selectTextColor:'#ffffff' ,
-    calendarYearBackgroundColor: '#282828',
-    headerColor: '#282828',
-    backgroundColor: '#282828'
+    color: '#282828',
+     textColor: '#ffffff',
+     calendarTextColor: '#000000',
+     selectColor: '#282828',
+     selectTextColor:'#ffffff' ,
+     calendarYearBackgroundColor: '#ffffff',
+     headerColor: '#282828',
+     backgroundColor: '#282828'
   },
   paper: {
     zDepth:5,

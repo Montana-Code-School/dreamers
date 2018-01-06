@@ -42,17 +42,18 @@ Action Button on New Dream page
 Dream Title on New Dream page
 */
 .dreamTitle {
-  color:#ffffff;
+  color:#cbcbcb;
   line-height:1;
   margin: 5px;
+  padding-top: 10px;
 }
 
 /*
 Dream Date on New Dream page
 */
 .dreamDate{
-  color:#ffffff;
-  line-height:.25;
+  color:#cbcbcb;
+  line-height:1;
   margin: 5px;
 }
 
@@ -60,11 +61,20 @@ Dream Date on New Dream page
 Dream description on New Dream page
 */
 .dreamDes{
-  color:#ffffff;
+  color:#cbcbcb;
   line-height:1.5;
   margin: 5px;
+  padding-bottom: 10px;
 }
 
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px hsla(216, 59%, 44%, 0.24) inset;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition-delay: 9999s;
+    -webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
+}
+
+.setFontC{
+  color:#ffffff;
 }

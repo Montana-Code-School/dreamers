@@ -1,5 +1,5 @@
 import React from 'react';
-import {List, ListItem, Toggle, Checkbox, Divider, Subheader} from 'material-ui';
+import {List, ListItem, Toggle} from 'material-ui';
 
 const styles = {
   root: {
@@ -10,21 +10,17 @@ const styles = {
 
 const Settings = () => (
   <div style={styles.root}>
-    <Divider />
       <List>
         <ListItem
-        leftCheckbox={<Checkbox />}
+        rightToggle={<Toggle />}
+        style={{color:'#ffffff',fontSize: '15px' }}
         primaryText="Notifications"
-        secondaryText="Allow notifications"
         />
+        <ListItem
+        style={{color:'#ffffff', fontSize: '15px'}}
+        primaryText="Entry Reminder?"
+        rightToggle={<Toggle />} />
       </List>
-      <Divider />
-      <List>
-        <Subheader>Settings</Subheader>
-        <ListItem primaryText="Entry Reminder?" rightToggle={<Toggle />} />
-        <ListItem primaryText="Public/Private" rightToggle={<Toggle />} />
-      </List>
-    <Divider />
   </div>
 );
 
