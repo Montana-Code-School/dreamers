@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../css/App.css'
-import {Checkbox, DatePicker, TextField, RaisedButton,TimePicker} from 'material-ui';
+import {Checkbox, DatePicker, TextField, RaisedButton} from 'material-ui';
 import axios from 'axios';
 import Auth from '../modules/Auth';
 
@@ -40,8 +40,8 @@ export default class NewDream extends Component {
       switch(tag){
         case "Lucid":
           self.props.changeColors({
-            color1: '#029C62',
-            color2: '#2C029C'
+            color1: '#7ac2c2',
+            color2: '#d3d58a'
           });
           break;
         case "Nightmare":
@@ -53,13 +53,13 @@ export default class NewDream extends Component {
         case "Epic":
           self.props.changeColors({
             color1: '#21254D',
-            color2: '#92D7D1'
+            color2: '#1ed953'
           });
           break;
         case "Recurring":
           self.props.changeColors({
             color1: '#271063',
-            color2: '#A8E5F3'
+            color2: '#98a3a6'
           });
           break;
         case "Adult":
@@ -79,7 +79,7 @@ export default class NewDream extends Component {
 
   onSubmit= () => {
     axios.post(
-      'https://dreamers-mcs.herokuapp.com/api/journals/userToken',
+      'http://localhost:5000/api/journals/userToken',
       {
         entryTitle: this.state.entryTitle,
         description: this.state.description,

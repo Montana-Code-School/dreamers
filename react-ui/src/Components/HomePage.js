@@ -18,10 +18,16 @@ class HomePage extends React.Component {
         }}
       >
         {Auth.isUserAuthenticated() ? (
-          <p style={{ fontSize: '20px', color: '#ffffff' }}>Welcome! You are logged in.</p>
+          <p style={{ margin:'20px', fontSize: '20px', color: '#ffffff' }}>Welcome! You are logged in.</p>
         ) : (
-          <p style={{ fontSize: '20px', color: '#ffffff' }}><em>“Each night, when I go to sleep, I die. And the next morning, when I wake up, I am reborn.” </em>Gandhi</p>
-        )}
+          <div>
+          <p style={{ fontSize: '50px', color: '#ffffff' }}>Dreamers</p>
+          <div>
+            <p style={{ fontSize: '20px', color: '#ffffff' }}><em>“Each night, when I go to sleep, I die. And the next morning, when I wake up, I am reborn.” </em>Gandhi</p>
+            <p style={{ fontSize: '10px', color: '#000000' }}>you are logged out</p>
+          </div>
+          </div>
+      )}
       </Paper>
     )
   }

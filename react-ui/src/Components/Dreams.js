@@ -18,7 +18,7 @@ export default class Dreams extends React.Component {
 
   componentDidMount() {
     axios.get(
-      'https://dreamers-mcs.herokuapp.com/api/journals/userToken',
+      'http://localhost:5000/api/journals/userToken',
       {
         headers:{
           authorization: `bearer ${Auth.getToken()}`
@@ -27,7 +27,7 @@ export default class Dreams extends React.Component {
     )
     .then((res) => {
       for(var i in res.data) {
-        res.data[i].dreamDate = moment(res.data[i].dreamDate).format('dddd' + ', ' + 'MMMM Do YYYY').toString()
+        res.data[i].dreamDate = moment(res.data[i].dreamDate).format('dddd, MMMM Do YYYY').toString()
       }
 
       return res
