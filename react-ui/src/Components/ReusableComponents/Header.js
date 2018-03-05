@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { AppBar , Avatar, Drawer, MenuItem, Divider}  from 'material-ui';
+import { AppBar , Avatar, Drawer, MenuItem}  from 'material-ui';
 var injectTapEventPlugin = require("react-tap-event-plugin");
 
 
@@ -26,7 +26,7 @@ export default class Header extends React.Component{
               <Avatar
                 size={100}
                 style={{margin:5}}
-              />
+              >M</Avatar>
               <MenuItem
                 primaryText="My Dreams"
                 style={{color:'#ffffff'}}
