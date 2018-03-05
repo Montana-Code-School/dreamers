@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Auth from '../modules/Auth';
 import LoginForm from '../Components/LoginForm.jsx';
-import axios from 'axios';
+
 
 class LoginPage extends React.Component {
   /*
@@ -50,7 +50,7 @@ class LoginPage extends React.Component {
     // create an AJAX request
     const xhr = new XMLHttpRequest();
     console.log(xhr)
-    xhr.open('post', 'https://dreamers-mcs.herokuapp.com/auth/login');
+    xhr.open('post', 'http://localhost:5000/auth/login');
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.responseType = 'json';
 

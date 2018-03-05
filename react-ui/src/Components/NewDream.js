@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../css/App.css'
-import {Checkbox, DatePicker, TextField, RaisedButton,TimePicker} from 'material-ui';
+import {Checkbox, DatePicker, TextField, RaisedButton} from 'material-ui';
 import axios from 'axios';
 import Auth from '../modules/Auth';
 
@@ -33,46 +33,53 @@ export default class NewDream extends Component {
     })
   }
 
-  onColor = (tag) => {
+  onColor = (e, tag) => {
     var self = this;
-    switch(tag){
-      case "Lucid":
-        //set colors for Lucid tag
-        self.props.changeColors({
-          color1: '#029C62', //greenish
-          color2: '#2C029C'//purplish
-        });
-        break;
-      case "Nightmare":
-        self.props.changeColors({
-          color1: '#9C022E', //dark red
-          color2: '#000000' //black
-        });
-        break;
-      case "Epic":
-        self.props.changeColors({
-          color1: '#21254D',//darkish blue
-          color2: '#92D7D1'//aqua
-        });
-        break;
-      case "Recurring":
-        self.props.changeColors({
-          color1: '#271063',//purplish
-          color2: '#A8E5F3' //bluish
-        });
-        break;
-      case "Adult":
-        self.props.changeColors({
-          color1: '#b57e3e',//Peach
-          color2: '#fe0a8e' //Fushia
-        });
-        break;
+
+    if(e.target.checked){
+      switch(tag){
+        case "Lucid":
+          self.props.changeColors({
+            color1: '#7ac2c2',
+            color2: '#d3d58a'
+          });
+          break;
+        case "Nightmare":
+          self.props.changeColors({
+            color1: '#9C022E',
+            color2: '#000000'
+          });
+          break;
+        case "Epic":
+          self.props.changeColors({
+            color1: '#21254D',
+            color2: '#1ed953'
+          });
+          break;
+        case "Recurring":
+          self.props.changeColors({
+            color1: '#271063',
+            color2: '#98a3a6'
+          });
+          break;
+        case "Adult":
+          self.props.changeColors({
+            color1: '#b57e3e',
+            color2: '#fe0a8e'
+          });
+          break;
+      }
+    }else{
+      self.props.changeColors({
+        color1: '#191970',
+        color2: '#00ced1'
+      });
     }
   }
 
   onSubmit= () => {
     axios.post(
-      'https://dreamers-mcs.herokuapp.com/api/journals/userToken',
+      'http://localhost:5000/api/journals/userToken',
       {
         entryTitle: this.state.entryTitle,
         description: this.state.description,
@@ -121,27 +128,27 @@ export default class NewDream extends Component {
             <Checkbox
               label="Lucid"
               style={styles.checkbox}
-              onClick={() => this.onColor("Lucid")}
+              onClick={(e) => this.onColor(e, "Lucid")}
             />
             <Checkbox
               label="Nightmare"
               style={styles.checkbox}
-              onClick={() => this.onColor("Nightmare")}
+              onClick={(e) => this.onColor(e, "Nightmare")}
             />
             <Checkbox
               label="Epic"
               style={styles.checkbox}
-              onClick={() => this.onColor("Epic")}
+              onClick={(e) => this.onColor(e, "Epic")}
             />
             <Checkbox
               label="Recurring"
               style={styles.checkbox}
-              onClick={() => this.onColor("Recurring")}
+              onClick={(e) => this.onColor(e, "Recurring")}
             />
             <Checkbox
               label="Adult"
               style={styles.checkbox}
-              onClick={() => this.onColor("Adult")}
+              onClick={(e) => this.onColor(e, "Adult")}
             />
           </div>
           <div className="saveButton">
