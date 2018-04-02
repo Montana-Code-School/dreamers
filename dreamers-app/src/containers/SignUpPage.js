@@ -19,13 +19,11 @@ class SignUpPage extends React.Component {
         email: '',
         name: '',
         password: '',
-        avatar: ''
       }
     };
 
     this.processForm = this.processForm.bind(this);
     this.changeUser = this.changeUser.bind(this);
-    this.handleFileUpload = this.handleFileUpload.bind(this);
   }
 
   /**
@@ -41,8 +39,7 @@ class SignUpPage extends React.Component {
     const name = encodeURIComponent(this.state.user.name);
     const email = encodeURIComponent(this.state.user.email);
     const password = encodeURIComponent(this.state.user.password);
-    const avatar = this.state.user.avatar;
-    const formData = `name=${name}&email=${email}&password=${password}&avatar=${avatar}`;
+    const formData = `name=${name}&email=${email}&password=${password}`;
 
     // create an AJAX request
     const xhr = new XMLHttpRequest();
@@ -92,25 +89,6 @@ class SignUpPage extends React.Component {
     });
   }
 
-handleFileUpload(event){
-  console.log(event.target.files);
-   var file    = document.querySelector('input[type=file]').files[0];
-   var reader  = new FileReader();
-
-   if (file) {
-     reader.readAsDataURL(file);
-     reader.onload = () => {
-       //console.log(reader.result);
-       this.setState ({
-         user: {
-           avatar: reader.result
-         }
-       })
-       console.log('state set');
-     };
-   }
-}
-
   /**
    * Render the component.
    */
@@ -122,9 +100,8 @@ handleFileUpload(event){
         onChange={this.changeUser}
         errors={this.state.errors}
         user={this.state.user}
-        handleFileUpload={this.handleFileUpload}
       />
-    
+
     );
   }
 

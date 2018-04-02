@@ -10,7 +10,6 @@ const SignUpForm = ({
   onChange,
   errors,
   user,
-  handleFileUpload
 }) => (
       <div className="Signup">
     <form action="/" onSubmit={onSubmit}>
@@ -47,16 +46,6 @@ const SignUpForm = ({
         />
       </div>
 
-      <div className="field-line">
-        <input
-          type="file"
-          name="file-upload"
-          label="Upload Avatar"
-          onChange={handleFileUpload}
-        >
-      </input>
-      </div>
-
       <div className="button-line">
         <RaisedButton type="submit" label="Create New Account" labelColor= "white"  />
       </div>
@@ -72,7 +61,6 @@ SignUpForm.propTypes = {
   onChange: PropTypes.func.isRequired,
   errors: PropTypes.object.isRequired,
   user: PropTypes.object.isRequired,
-  handleFileUpload: PropTypes.func.isRequired
 };
 
 export default SignUpForm;
