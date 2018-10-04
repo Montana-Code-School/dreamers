@@ -4,6 +4,9 @@ import {Checkbox, DatePicker, TextField, RaisedButton,TimePicker} from 'material
 import axios from 'axios';
 import Auth from '../modules/Auth';
 
+const prodUrl = 'https://dreamers-mcs.herokuapp.com/api/journals/userToken';
+const devUrl = 'http://localhost:5000/api/journals/userToken';
+
 const styles = {
   block: {
     maxWidth: 250,
@@ -79,7 +82,7 @@ export default class NewDream extends Component {
 
   onSubmit= () => {
     axios.post(
-      'https://dreamers-mcs.herokuapp.com/api/journals/userToken',
+      devUrl,
       {
         entryTitle: this.state.entryTitle,
         description: this.state.description,

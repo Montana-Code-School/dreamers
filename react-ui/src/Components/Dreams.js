@@ -7,6 +7,8 @@ import Auth from '../modules/Auth';
 import '../css/App.css'
 
 const moment = require('moment');
+const prodUrl = 'https://dreamers-mcs.herokuapp.com/api/journals/userToken';
+const devUrl = 'http://localhost:5000/api/journals/userToken';
 
 export default class Dreams extends React.Component {
   constructor(props){
@@ -18,7 +20,7 @@ export default class Dreams extends React.Component {
 
   componentDidMount() {
     axios.get(
-      'https://dreamers-mcs.herokuapp.com/api/journals/userToken',
+      devUrl,
       {
         headers:{
           authorization: `bearer ${Auth.getToken()}`

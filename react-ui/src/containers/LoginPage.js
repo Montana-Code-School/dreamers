@@ -50,7 +50,9 @@ class LoginPage extends React.Component {
     // create an AJAX request
     const xhr = new XMLHttpRequest();
     console.log(xhr)
-    xhr.open('post', 'https://dreamers-mcs.herokuapp.com/auth/login');
+    const prodUrl = 'https://dreamers-mcs.herokuapp.com/auth/login'
+    const devUrl = 'http://localhost:5000/auth/login'
+    xhr.open('post', devUrl);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.responseType = 'json';
 
